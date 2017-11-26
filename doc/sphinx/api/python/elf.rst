@@ -393,6 +393,17 @@ Symbol bindings
 
 ----------
 
+
+Symbol Visibility
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: lief.ELF.SYMBOL_VISIBILITY
+  :members:
+  :inherited-members:
+  :undoc-members:
+
+----------
+
 Relocations x86-64
 ~~~~~~~~~~~~~~~~~~
 

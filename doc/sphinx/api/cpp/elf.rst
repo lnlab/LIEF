@@ -261,6 +261,14 @@ Symbol bindings
 
 ----------
 
+Symbol visibility
+~~~~~~~~~~~~~~~~~
+
+.. doxygenenum:: LIEF::ELF::SYMBOL_VISIBILITY
+   :project: lief
+
+----------
+
 Symbol types
 ~~~~~~~~~~~~
 
