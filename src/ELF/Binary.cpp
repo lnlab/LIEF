@@ -458,8 +458,8 @@ Symbol& Binary::add_exported_function(uint64_t address, const std::string& name)
   }
 
   // First: Check if a symbol with the given 'name' exists in the **dynamic** table
-  if (this->has_dynamic_symbol(name)) {
-    Symbol& s = this->get_dynamic_symbol(name);
+  if (this->has_dynamic_symbol(funcname)) {
+    Symbol& s = this->get_dynamic_symbol(funcname);
     s.type(ELF_SYMBOL_TYPES::STT_FUNC);
     s.binding(SYMBOL_BINDINGS::STB_GLOBAL);
     s.visibility(ELF_SYMBOL_VISIBILITY::STV_DEFAULT);
@@ -468,8 +468,8 @@ Symbol& Binary::add_exported_function(uint64_t address, const std::string& name)
   }
 
   // Second: Check if a symbol with the given 'name' exists in the **static**
-  if (this->has_static_symbol(name)) {
-    Symbol& s = this->get_static_symbol(name);
+  if (this->has_static_symbol(funcname)) {
+    Symbol& s = this->get_static_symbol(funcname);
     s.type(ELF_SYMBOL_TYPES::STT_FUNC);
     s.binding(SYMBOL_BINDINGS::STB_GLOBAL);
     s.visibility(ELF_SYMBOL_VISIBILITY::STV_DEFAULT);
